@@ -2,13 +2,76 @@
 
 {% block css_adicional %}
 <style>
-    h1{
-        color: blue;
-    }
+    /* Mantendo suas classes originais */
+.card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: sans-serif;
+    background: #fff;
+}
+
+.card__image-wrapper {
+    background-color: #f6f6f6; /* Fundo cinza claro igual ao site */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card__body {
+    padding: 15px;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    color: #3d1c02; /* Tom de marrom da Cacau Show */
+    margin-bottom: 8px;
+}
+
+.card__description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.button--small {
+    background-color: #7a3d21; /* Marrom institucional */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button--small:hover {
+    background-color: #5a2d18;
+}
 </style>
 {% endblock %}
 
 {% block conteudo %}
 <h1>Minha Segunda Página</h1>
-<img src="https://studioghibli.com.br/2021/04/14/o-castelo-animado-box-do-livro-que-inspirou-filme-ghibli-saira-proximo-mes/?srsltid=AfmBOoqIHno3-kH4kUbyY-xaOBTMzO4fm0yheMabgaW9ZOFgK4lhuORy" alt="">
+<img src="https://cdn.slowdownwiseup.co.uk/media/original_images/46028.jpeg.1280x0_q70.webp" alt="">
 {% endblock %}
