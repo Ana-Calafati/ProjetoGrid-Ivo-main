@@ -1,0 +1,8 @@
+:root{
+    --header_color:white;
+    --banner_gradient_color:rgba(0, 0,0, 0.5);
+    --titles_color:#2f3554;
+    --button_color:rgb(222, 145, 1);
+    --button_color_hover:rgb(168, 111, 4);
+
+}

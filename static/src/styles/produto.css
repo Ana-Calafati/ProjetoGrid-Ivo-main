@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Galeria */
+.product-gallery {
+    flex: 1;
+    text-align: center;
+}
+
+.product-gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Detalhes */
+.product-info {
+    flex: 1;
+}
+
+.breadcrumb {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.sku {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Preços */
+.price-old {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+.price-current {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.price-current .value {
+    font-size: 32px;
+}
+
+/* Alerta de Estoque */
+.out-of-stock {
+    background-color: #fff5f5;
+    border: 1px solid #ffebeb;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    border-radius: 4px;
+    color: #d32f2f;
+}
+
+.out-of-stock strong {
+    display: block;
+}
+
+.out-of-stock p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Badge de Fidelidade */
+.loyalty-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #a03333;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.points-icon {
+    background: white;
+    color: #a03333;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
