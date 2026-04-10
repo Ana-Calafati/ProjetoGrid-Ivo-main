@@ -13,3 +13,8 @@ def mostrar_comidas():
     conexao.close()
 
     return item
+
+def rec_destaque():
+    conexao, cursor = criar_conexao()
+    cursor.execute("""
+                    SELECT destaque, url_imagem from itens where   """)
