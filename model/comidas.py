@@ -1,10 +1,10 @@
-from database.conexao import conectar
+from migrate.conexao import conectar
 
 def mostrar_comidas():
     conexao, cursor = conectar()
 
     #executado consulta genero
-    cursor.execute("SELECT codigo, produto, descricao, destaque, valor, imagem, disponibilidade FROM itens;")
+    cursor.execute("SELECT codigo, produto, descricao, destaque, valor, imagem FROM itens;")
 
     #recuperando os dados do genero
     item = cursor.fetchall()
@@ -15,6 +15,11 @@ def mostrar_comidas():
     return item
 
 def rec_destaque():
-    conexao, cursor = criar_conexao()
+    conexao, cursor = conectar()
     cursor.execute("""
-                    SELECT destaque, url_imagem from itens where   """)
+                    SELECT codigo, produto, descricao, destaque, valor, imagem WHERE destaque =1; """)
+    destaque = cursor.fetchall()
+    conexao.close()
+    return destaque
+    
+

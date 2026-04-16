@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from model.comidas import mostrar_comidas
+from model.comidas import mostrar_comidas, rec_destaque
+
 
 app = Flask(__name__)
 
@@ -12,5 +13,4 @@ def pagina_inicial():
 def segunda_pagina():
     return render_template("produto.html")
 
-if __name__=="__main__":
-    app.run(debug=True)     
+@app.route("/logar", met) 
