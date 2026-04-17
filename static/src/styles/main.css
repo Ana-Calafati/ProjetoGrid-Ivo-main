@@ -6,6 +6,7 @@
     align-items: center;
     background: var(--header_color);
     padding: 25px;
+    width: 100%;
 }
     
 .header__container{
@@ -152,6 +153,7 @@
     display: block;
     background-color: rgb(45, 45, 94);
     padding: 40px 20px;
+    width: 100%;
 }
 
 .footer__text{

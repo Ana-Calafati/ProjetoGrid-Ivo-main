@@ -1,4 +1,4 @@
-from migrate.conexao import conectar
+from database.conexao import conectar
 
 def mostrar_comidas():
     conexao, cursor = conectar()
@@ -17,7 +17,7 @@ def mostrar_comidas():
 def rec_destaque():
     conexao, cursor = conectar()
     cursor.execute("""
-                    SELECT codigo, produto, descricao, destaque, valor, imagem WHERE destaque =1; """)
+                    SELECT codigo, produto, descricao, destaque, valor, imagem FROM itens WHERE destaque = 1; """)
     destaque = cursor.fetchall()
     conexao.close()
     return destaque
