@@ -40,3 +40,5 @@ quantidade int default 1,
 CONSTRAINT fk_itenscarrinho_carrinhos FOREIGN KEY (cod_carrinho) REFERENCES carrinhos (cod_carrinho),
 CONSTRAINT fk_itenscarrinho_itens FOREIGN KEY (cod_produto) REFERENCES itens(codigo)
 );
+
+select usuario, senha from usuarios where usuario = "Ana" and senha = "123";

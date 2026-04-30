@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block css_adicional %}
+<link rel="stylesheet" href="../static/src/styles/login.css">
+{% endblock %}
+{% block conteudo %}
+<body>
+    
+
+<form id="cadastroForm" action="/login/post" method="POST">
+
+  <label for="nome">Usuario:</label>
+  <input type="text" id="nome" name="nome" required>
+  
+  <label for="senha">Senha:</label>
+  <input type="password" id="senha" name="senha" required>
+
+  <button type="submit">Logar</button>
+</form>
+
+</body>
+{% endblock %}

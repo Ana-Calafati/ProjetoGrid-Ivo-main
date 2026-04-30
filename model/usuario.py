@@ -16,12 +16,9 @@ class Usuario:
         conexao.close()
 
     @staticmethod
-    def logar(usuario:str, senha:str)->dict:
+    def logar(usuario:str, senha:str) -> list:
         conexao, cursor = conectar()
-        cursor.execute("""
-                        SELECT * FROM usuarios WHERE usuario = %s AND senha %s;
-                         """,
-                         [senha, usuario])
+        cursor.execute("""SELECT usuario, senha FROM usuarios WHERE usuario = %s AND senha = %s;""", (usuario, senha))
         resultado = cursor.fetchone()
         conexao.close()
         return resultado
