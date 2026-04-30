@@ -41,4 +41,8 @@ CONSTRAINT fk_itenscarrinho_carrinhos FOREIGN KEY (cod_carrinho) REFERENCES carr
 CONSTRAINT fk_itenscarrinho_itens FOREIGN KEY (cod_produto) REFERENCES itens(codigo)
 );
 
-select usuario, senha from usuarios where usuario = "Ana" and senha = "123";
+SELECT carrinho.cod_carrinho, item_carrinho.quantidade, carrinho.usuario, carrinho.finalizado, itens.valor
+FROM item_carrinho
+INNER JOIN itens ON itens.produto = item_carrinho.produto
+INNER JOIN carrinho ON carrinho.cod_carrinho = item_carrinho.carrinho
+WHERE carrinho.usuario = %s, """
